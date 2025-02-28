@@ -224,8 +224,16 @@ class TeleDartMessageSender extends AbstractMessageSender {
 
       for (var i = 0; i < group.messages.length; i++) {
         final message = group.messages[i];
-        final sentMessage = await _sendMessage(group, message);
-        if (sentMessage == null) break;
+        final sendResult = await _sendMessage(group, message);
+        final sentMessage = sendResult.$1;
+        if (sentMessage == null) {
+          final messageGroup = sendResult.$2;
+          if (messageGroup != null) {
+            result[j] = messageGroup;
+          }
+
+          break;
+        }
 
         result[j] = group.copyWith(
           messages: List.of(group.messages)
@@ -247,13 +255,13 @@ class TeleDartMessageSender extends AbstractMessageSender {
     return result;
   }
 
-  /// Returns `null` when something went wrong during message sending,
-  /// otherwise returns [SerializedMessage] that was sent.
-  Future<SerializedMessage?> _sendMessage(
+  /// Returns [SerializedMessage] that was sent(if it was sent) and updated
+  /// [MessageGroup] (if it was updated).
+  Future<(SerializedMessage?, MessageGroup?)> _sendMessage(
     MessageGroup messageGroup,
     SerializedMessage initialMessage,
   ) async {
-    if (initialMessage.isSent ?? false) return initialMessage;
+    if (initialMessage.isSent ?? false) return (initialMessage, null);
     var message = initialMessage;
 
     List<Message>? sentMessageDetails;
@@ -268,7 +276,7 @@ class TeleDartMessageSender extends AbstractMessageSender {
       // и тот же чат
       if ((_chatCounters[messageGroup.chatId] ?? 0) >=
           singleChatMessagesLimit) {
-        return null;
+        return (null, null);
       }
 
       // Если сумма количества сообшений в этой итерации
@@ -279,7 +287,7 @@ class TeleDartMessageSender extends AbstractMessageSender {
               (message.files?.length ?? 0) >
           singleChatMessagesLimit) {
         _chatCounters[messageGroup.chatId] = singleChatMessagesLimit;
-        return null;
+        return (null, null);
       }
 
       sentMessageDetails = await _sendSerializedMessage(
@@ -297,8 +305,10 @@ class TeleDartMessageSender extends AbstractMessageSender {
         sendMessagesCount: message.files?.length ?? 1,
       );
 
-      await _processGroupSendingFailed(messageGroup, error, stackTrace);
-      return null;
+      return (
+        null,
+        await _processGroupSendingFailed(messageGroup, error, stackTrace),
+      );
     }
 
     if (message.isSent ?? false) {
@@ -309,10 +319,11 @@ class TeleDartMessageSender extends AbstractMessageSender {
       );
     }
 
-    return message;
+    return (message, null);
   }
 
-  Future<void> _processGroupSendingFailed(
+  /// Returns updated [MessageGroup].
+  Future<MessageGroup> _processGroupSendingFailed(
     MessageGroup initialMessageGroup,
     Object error,
     StackTrace stackTrace,
@@ -359,6 +370,8 @@ class TeleDartMessageSender extends AbstractMessageSender {
       // чтобы сообщения не перемешались
       _chatCounters[messageGroup.chatId] = singleChatMessagesLimit;
     }
+
+    return messageGroup;
   }
 
   void _resetCounters() {
