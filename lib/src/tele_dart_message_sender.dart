@@ -220,11 +220,9 @@ class TeleDartMessageSender extends AbstractMessageSender {
     result = sortedIndexedGroups.map((item) => item.$2).toList();
 
     for (var j = 0; j < result.length; j++) {
-      final group = result[j];
-
-      for (var i = 0; i < group.messages.length; i++) {
-        final message = group.messages[i];
-        final sendResult = await _sendMessage(group, message);
+      for (var i = 0; i < result[j].messages.length; i++) {
+        final message = result[j].messages[i];
+        final sendResult = await _sendMessage(result[j], message);
         final sentMessage = sendResult.$1;
         if (sentMessage == null) {
           final messageGroup = sendResult.$2;
@@ -235,8 +233,8 @@ class TeleDartMessageSender extends AbstractMessageSender {
           break;
         }
 
-        result[j] = group.copyWith(
-          messages: List.of(group.messages)
+        result[j] = result[j].copyWith(
+          messages: List.of(result[j].messages)
             ..replaceRange(i, i + 1, [sentMessage]),
         );
 
