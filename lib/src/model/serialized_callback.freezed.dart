@@ -21,7 +21,8 @@ SerializedCallback _$SerializedCallbackFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$SerializedCallback {
   String get text => throw _privateConstructorUsedError;
-  String get callbackData => throw _privateConstructorUsedError;
+  String? get callbackData => throw _privateConstructorUsedError;
+  String? get url => throw _privateConstructorUsedError;
 
   /// Serializes this SerializedCallback to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -39,7 +40,7 @@ abstract class $SerializedCallbackCopyWith<$Res> {
           SerializedCallback value, $Res Function(SerializedCallback) then) =
       _$SerializedCallbackCopyWithImpl<$Res, SerializedCallback>;
   @useResult
-  $Res call({String text, String callbackData});
+  $Res call({String text, String? callbackData, String? url});
 }
 
 /// @nodoc
@@ -58,17 +59,22 @@ class _$SerializedCallbackCopyWithImpl<$Res, $Val extends SerializedCallback>
   @override
   $Res call({
     Object? text = null,
-    Object? callbackData = null,
+    Object? callbackData = freezed,
+    Object? url = freezed,
   }) {
     return _then(_value.copyWith(
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      callbackData: null == callbackData
+      callbackData: freezed == callbackData
           ? _value.callbackData
           : callbackData // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
     ) as $Val);
   }
 }
@@ -81,7 +87,7 @@ abstract class _$$SerializedCallbackImplCopyWith<$Res>
       __$$SerializedCallbackImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String text, String callbackData});
+  $Res call({String text, String? callbackData, String? url});
 }
 
 /// @nodoc
@@ -98,17 +104,22 @@ class __$$SerializedCallbackImplCopyWithImpl<$Res>
   @override
   $Res call({
     Object? text = null,
-    Object? callbackData = null,
+    Object? callbackData = freezed,
+    Object? url = freezed,
   }) {
     return _then(_$SerializedCallbackImpl(
       text: null == text
           ? _value.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
-      callbackData: null == callbackData
+      callbackData: freezed == callbackData
           ? _value.callbackData
           : callbackData // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
+      url: freezed == url
+          ? _value.url
+          : url // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -117,7 +128,7 @@ class __$$SerializedCallbackImplCopyWithImpl<$Res>
 @JsonSerializable()
 class _$SerializedCallbackImpl implements _SerializedCallback {
   const _$SerializedCallbackImpl(
-      {required this.text, required this.callbackData});
+      {required this.text, this.callbackData, this.url});
 
   factory _$SerializedCallbackImpl.fromJson(Map<String, dynamic> json) =>
       _$$SerializedCallbackImplFromJson(json);
@@ -125,11 +136,13 @@ class _$SerializedCallbackImpl implements _SerializedCallback {
   @override
   final String text;
   @override
-  final String callbackData;
+  final String? callbackData;
+  @override
+  final String? url;
 
   @override
   String toString() {
-    return 'SerializedCallback(text: $text, callbackData: $callbackData)';
+    return 'SerializedCallback(text: $text, callbackData: $callbackData, url: $url)';
   }
 
   @override
@@ -139,12 +152,13 @@ class _$SerializedCallbackImpl implements _SerializedCallback {
             other is _$SerializedCallbackImpl &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.callbackData, callbackData) ||
-                other.callbackData == callbackData));
+                other.callbackData == callbackData) &&
+            (identical(other.url, url) || other.url == url));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, text, callbackData);
+  int get hashCode => Object.hash(runtimeType, text, callbackData, url);
 
   /// Create a copy of SerializedCallback
   /// with the given fields replaced by the non-null parameter values.
@@ -166,7 +180,8 @@ class _$SerializedCallbackImpl implements _SerializedCallback {
 abstract class _SerializedCallback implements SerializedCallback {
   const factory _SerializedCallback(
       {required final String text,
-      required final String callbackData}) = _$SerializedCallbackImpl;
+      final String? callbackData,
+      final String? url}) = _$SerializedCallbackImpl;
 
   factory _SerializedCallback.fromJson(Map<String, dynamic> json) =
       _$SerializedCallbackImpl.fromJson;
@@ -174,7 +189,9 @@ abstract class _SerializedCallback implements SerializedCallback {
   @override
   String get text;
   @override
-  String get callbackData;
+  String? get callbackData;
+  @override
+  String? get url;
 
   /// Create a copy of SerializedCallback
   /// with the given fields replaced by the non-null parameter values.
