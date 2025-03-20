@@ -8,7 +8,8 @@ part 'serialized_callback.g.dart';
 class SerializedCallback with _$SerializedCallback {
   const factory SerializedCallback({
     required String text,
-    required String callbackData,
+    String? callbackData,
+    String? url,
   }) = _SerializedCallback;
 
   factory SerializedCallback.fromJson(Map<String, dynamic> json) =>

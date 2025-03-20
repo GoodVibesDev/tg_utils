@@ -12,6 +12,7 @@ extension SerializedMarkupExtension on List<List<SerializedCallback>> {
                   (serializedCallback) => InlineKeyboardButton(
                     text: serializedCallback.text,
                     callbackData: serializedCallback.callbackData,
+                    url: serializedCallback.url,
                   ),
                 )
                 .toList(),
