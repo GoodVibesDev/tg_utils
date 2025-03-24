@@ -527,7 +527,9 @@ class TeleDartMessageSender extends AbstractMessageSender {
       if (fileResource is String) {
         try {
           final uri = Uri.parse(fileResource);
-          if (uri.scheme != 'https') {
+          if (uri.scheme != 'https' ||
+              // Через url можно отправлять только документы формата .pdf/.zip
+              (file.fileName != null && !_isZipOrPdf(file.fileName!))) {
             // TODO(sergsavchuk): придумать что-то, чтобы эта загрзка не
             //  замедляла отправку: возможно форсить всегда https вполне себе
             //  нормальная идея, просто нужно завести для этого нормальный
@@ -614,6 +616,10 @@ class TeleDartMessageSender extends AbstractMessageSender {
           );
       }
     }
+  }
+
+  bool _isZipOrPdf(String fileName) {
+    return fileName.contains(RegExp(r'\.(zip|pdf)$'));
   }
 }
 
