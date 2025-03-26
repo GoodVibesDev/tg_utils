@@ -333,6 +333,24 @@ class TeleDartMessageSender extends AbstractMessageSender {
       await _onBotBanned(messageGroup.chatId);
     } else if (error is MediaGroupTooBigException) {
       messageGroup = messageGroup.copyWith(failCounter: failLimit);
+    } else if (error is HttpClientException &&
+        error.code == 400 &&
+        error.description.contains('BUTTON_USER_PRIVACY_RESTRICTED')) {
+      // Если вылетела данная ошибка, то мы не смогли отправить кнопку
+      // со ссылкой на пользователя, покачто просто отмечаем будто сообщение
+      // отправлено
+      // TODO(eug) improve this logic
+      final failedMessage = messageGroup.messages
+          .where((message) => (message.isSent ?? false) == false)
+          .firstOrNull;
+
+      if (failedMessage != null) {
+        messageGroup = messageGroup.copyWith(
+          messages: [...messageGroup.messages]
+            ..[messageGroup.messages.indexOf(failedMessage)] =
+                failedMessage.copyWith(isSent: true),
+        );
+      }
     } else {
       messageGroup = messageGroup.copyWith(
         failCounter: (messageGroup.failCounter ?? 0) + 1,
