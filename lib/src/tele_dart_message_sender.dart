@@ -357,7 +357,7 @@ class TeleDartMessageSender extends AbstractMessageSender {
       );
     }
 
-    if (messageGroup.failCounter! >= failLimit) {
+    if ((messageGroup.failCounter ?? 0) >= failLimit) {
       _logger.e(
         'sendSerializedMessage error. Message: ${messageGroup.messages}',
         error: error,
