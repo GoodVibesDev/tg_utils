@@ -5,7 +5,7 @@ part 'serialized_callback.freezed.dart';
 part 'serialized_callback.g.dart';
 
 @freezed
-class SerializedCallback with _$SerializedCallback {
+sealed class SerializedCallback with _$SerializedCallback {
   const factory SerializedCallback({
     required String text,
     String? callbackData,

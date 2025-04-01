@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,82 +10,59 @@ part of 'tg_message_group_queue.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-TgMessageGroupQueue _$TgMessageGroupQueueFromJson(Map<String, dynamic> json) {
-  return _TgMessageGroupQueue.fromJson(json);
-}
 
 /// @nodoc
 mixin _$TgMessageGroupQueue {
-  List<MessageGroup> get groups => throw _privateConstructorUsedError;
-
-  /// Serializes this TgMessageGroupQueue to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  List<MessageGroup> get groups;
 
   /// Create a copy of TgMessageGroupQueue
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $TgMessageGroupQueueCopyWith<TgMessageGroupQueue> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $TgMessageGroupQueueCopyWith<$Res> {
-  factory $TgMessageGroupQueueCopyWith(
-          TgMessageGroupQueue value, $Res Function(TgMessageGroupQueue) then) =
-      _$TgMessageGroupQueueCopyWithImpl<$Res, TgMessageGroupQueue>;
-  @useResult
-  $Res call({List<MessageGroup> groups});
-}
-
-/// @nodoc
-class _$TgMessageGroupQueueCopyWithImpl<$Res, $Val extends TgMessageGroupQueue>
-    implements $TgMessageGroupQueueCopyWith<$Res> {
-  _$TgMessageGroupQueueCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of TgMessageGroupQueue
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $TgMessageGroupQueueCopyWith<TgMessageGroupQueue> get copyWith =>
+      _$TgMessageGroupQueueCopyWithImpl<TgMessageGroupQueue>(
+          this as TgMessageGroupQueue, _$identity);
+
+  /// Serializes this TgMessageGroupQueue to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? groups = null,
-  }) {
-    return _then(_value.copyWith(
-      groups: null == groups
-          ? _value.groups
-          : groups // ignore: cast_nullable_to_non_nullable
-              as List<MessageGroup>,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is TgMessageGroupQueue &&
+            const DeepCollectionEquality().equals(other.groups, groups));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(groups));
+
+  @override
+  String toString() {
+    return 'TgMessageGroupQueue(groups: $groups)';
   }
 }
 
 /// @nodoc
-abstract class _$$TgMessageGroupQueueImplCopyWith<$Res>
-    implements $TgMessageGroupQueueCopyWith<$Res> {
-  factory _$$TgMessageGroupQueueImplCopyWith(_$TgMessageGroupQueueImpl value,
-          $Res Function(_$TgMessageGroupQueueImpl) then) =
-      __$$TgMessageGroupQueueImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $TgMessageGroupQueueCopyWith<$Res> {
+  factory $TgMessageGroupQueueCopyWith(
+          TgMessageGroupQueue value, $Res Function(TgMessageGroupQueue) _then) =
+      _$TgMessageGroupQueueCopyWithImpl;
   @useResult
   $Res call({List<MessageGroup> groups});
 }
 
 /// @nodoc
-class __$$TgMessageGroupQueueImplCopyWithImpl<$Res>
-    extends _$TgMessageGroupQueueCopyWithImpl<$Res, _$TgMessageGroupQueueImpl>
-    implements _$$TgMessageGroupQueueImplCopyWith<$Res> {
-  __$$TgMessageGroupQueueImplCopyWithImpl(_$TgMessageGroupQueueImpl _value,
-      $Res Function(_$TgMessageGroupQueueImpl) _then)
-      : super(_value, _then);
+class _$TgMessageGroupQueueCopyWithImpl<$Res>
+    implements $TgMessageGroupQueueCopyWith<$Res> {
+  _$TgMessageGroupQueueCopyWithImpl(this._self, this._then);
+
+  final TgMessageGroupQueue _self;
+  final $Res Function(TgMessageGroupQueue) _then;
 
   /// Create a copy of TgMessageGroupQueue
   /// with the given fields replaced by the non-null parameter values.
@@ -93,9 +71,9 @@ class __$$TgMessageGroupQueueImplCopyWithImpl<$Res>
   $Res call({
     Object? groups = null,
   }) {
-    return _then(_$TgMessageGroupQueueImpl(
+    return _then(_self.copyWith(
       groups: null == groups
-          ? _value._groups
+          ? _self.groups
           : groups // ignore: cast_nullable_to_non_nullable
               as List<MessageGroup>,
     ));
@@ -104,12 +82,11 @@ class __$$TgMessageGroupQueueImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$TgMessageGroupQueueImpl implements _TgMessageGroupQueue {
-  const _$TgMessageGroupQueueImpl({required final List<MessageGroup> groups})
+class _TgMessageGroupQueue implements TgMessageGroupQueue {
+  const _TgMessageGroupQueue({required final List<MessageGroup> groups})
       : _groups = groups;
-
-  factory _$TgMessageGroupQueueImpl.fromJson(Map<String, dynamic> json) =>
-      _$$TgMessageGroupQueueImplFromJson(json);
+  factory _TgMessageGroupQueue.fromJson(Map<String, dynamic> json) =>
+      _$TgMessageGroupQueueFromJson(json);
 
   final List<MessageGroup> _groups;
   @override
@@ -119,16 +96,27 @@ class _$TgMessageGroupQueueImpl implements _TgMessageGroupQueue {
     return EqualUnmodifiableListView(_groups);
   }
 
+  /// Create a copy of TgMessageGroupQueue
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'TgMessageGroupQueue(groups: $groups)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$TgMessageGroupQueueCopyWith<_TgMessageGroupQueue> get copyWith =>
+      __$TgMessageGroupQueueCopyWithImpl<_TgMessageGroupQueue>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$TgMessageGroupQueueToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$TgMessageGroupQueueImpl &&
+            other is _TgMessageGroupQueue &&
             const DeepCollectionEquality().equals(other._groups, _groups));
   }
 
@@ -137,37 +125,45 @@ class _$TgMessageGroupQueueImpl implements _TgMessageGroupQueue {
   int get hashCode =>
       Object.hash(runtimeType, const DeepCollectionEquality().hash(_groups));
 
-  /// Create a copy of TgMessageGroupQueue
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$TgMessageGroupQueueImplCopyWith<_$TgMessageGroupQueueImpl> get copyWith =>
-      __$$TgMessageGroupQueueImplCopyWithImpl<_$TgMessageGroupQueueImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$TgMessageGroupQueueImplToJson(
-      this,
-    );
+  String toString() {
+    return 'TgMessageGroupQueue(groups: $groups)';
   }
 }
 
-abstract class _TgMessageGroupQueue implements TgMessageGroupQueue {
-  const factory _TgMessageGroupQueue(
-      {required final List<MessageGroup> groups}) = _$TgMessageGroupQueueImpl;
-
-  factory _TgMessageGroupQueue.fromJson(Map<String, dynamic> json) =
-      _$TgMessageGroupQueueImpl.fromJson;
-
+/// @nodoc
+abstract mixin class _$TgMessageGroupQueueCopyWith<$Res>
+    implements $TgMessageGroupQueueCopyWith<$Res> {
+  factory _$TgMessageGroupQueueCopyWith(_TgMessageGroupQueue value,
+          $Res Function(_TgMessageGroupQueue) _then) =
+      __$TgMessageGroupQueueCopyWithImpl;
   @override
-  List<MessageGroup> get groups;
+  @useResult
+  $Res call({List<MessageGroup> groups});
+}
+
+/// @nodoc
+class __$TgMessageGroupQueueCopyWithImpl<$Res>
+    implements _$TgMessageGroupQueueCopyWith<$Res> {
+  __$TgMessageGroupQueueCopyWithImpl(this._self, this._then);
+
+  final _TgMessageGroupQueue _self;
+  final $Res Function(_TgMessageGroupQueue) _then;
 
   /// Create a copy of TgMessageGroupQueue
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$TgMessageGroupQueueImplCopyWith<_$TgMessageGroupQueueImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? groups = null,
+  }) {
+    return _then(_TgMessageGroupQueue(
+      groups: null == groups
+          ? _self._groups
+          : groups // ignore: cast_nullable_to_non_nullable
+              as List<MessageGroup>,
+    ));
+  }
 }
+
+// dart format on

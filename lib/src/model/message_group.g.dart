@@ -6,8 +6,8 @@ part of 'message_group.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$MessageGroupImpl _$$MessageGroupImplFromJson(Map<String, dynamic> json) =>
-    _$MessageGroupImpl(
+_MessageGroup _$MessageGroupFromJson(Map<String, dynamic> json) =>
+    _MessageGroup(
       messages: (json['messages'] as List<dynamic>)
           .map((e) => SerializedMessage.fromJson(e as Map<String, dynamic>))
           .toList(),
@@ -16,7 +16,7 @@ _$MessageGroupImpl _$$MessageGroupImplFromJson(Map<String, dynamic> json) =>
       priority: (json['priority'] as num?)?.toInt(),
     );
 
-Map<String, dynamic> _$$MessageGroupImplToJson(_$MessageGroupImpl instance) =>
+Map<String, dynamic> _$MessageGroupToJson(_MessageGroup instance) =>
     <String, dynamic>{
       'messages': instance.messages,
       'chatId': instance.chatId,

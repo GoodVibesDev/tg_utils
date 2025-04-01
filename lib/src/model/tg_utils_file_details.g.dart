@@ -6,8 +6,7 @@ part of 'tg_utils_file_details.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FileDetailsImpl _$$FileDetailsImplFromJson(Map<String, dynamic> json) =>
-    _$FileDetailsImpl(
+_FileDetails _$FileDetailsFromJson(Map<String, dynamic> json) => _FileDetails(
       tgFileType: $enumDecode(_$TgUtilsFileTypeEnumMap, json['tgFileType']),
       id: (json['id'] as num?)?.toInt(),
       mediaGroupId: json['mediaGroupId'] as String?,
@@ -16,7 +15,7 @@ _$FileDetailsImpl _$$FileDetailsImplFromJson(Map<String, dynamic> json) =>
       fileName: json['fileName'] as String?,
     );
 
-Map<String, dynamic> _$$FileDetailsImplToJson(_$FileDetailsImpl instance) =>
+Map<String, dynamic> _$FileDetailsToJson(_FileDetails instance) =>
     <String, dynamic>{
       'tgFileType': _$TgUtilsFileTypeEnumMap[instance.tgFileType]!,
       'id': instance.id,

@@ -5,7 +5,7 @@ part 'tg_utils_failed_message_group.freezed.dart';
 part 'tg_utils_failed_message_group.g.dart';
 
 @freezed
-class TgUtilsFailedMessageGroup with _$TgUtilsFailedMessageGroup {
+sealed class TgUtilsFailedMessageGroup with _$TgUtilsFailedMessageGroup {
   const factory TgUtilsFailedMessageGroup({
     required String group,
     required String message,

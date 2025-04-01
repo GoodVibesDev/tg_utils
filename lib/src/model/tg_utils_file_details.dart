@@ -6,7 +6,7 @@ part 'tg_utils_file_details.freezed.dart';
 part 'tg_utils_file_details.g.dart';
 
 @freezed
-class TgUtilsFileDetails with _$TgUtilsFileDetails {
+sealed class TgUtilsFileDetails with _$TgUtilsFileDetails {
   const factory TgUtilsFileDetails({
     required TgUtilsFileType tgFileType,
     int? id,

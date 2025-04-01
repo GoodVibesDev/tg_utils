@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,122 +10,74 @@ part of 'serialized_message.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-SerializedMessage _$SerializedMessageFromJson(Map<String, dynamic> json) {
-  return _SerializedMessage.fromJson(json);
-}
 
 /// @nodoc
 mixin _$SerializedMessage {
-  String? get text => throw _privateConstructorUsedError;
-  List<TgUtilsFileDetails>? get files => throw _privateConstructorUsedError;
-  List<List<SerializedCallback>>? get serializedMarkup =>
-      throw _privateConstructorUsedError;
-  int? get replyToId => throw _privateConstructorUsedError;
-  int? get editMessageId => throw _privateConstructorUsedError;
-  String? get type => throw _privateConstructorUsedError;
-  String? get additionalData => throw _privateConstructorUsedError;
-  bool? get isSent => throw _privateConstructorUsedError;
-
-  /// Serializes this SerializedMessage to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  String? get text;
+  List<TgUtilsFileDetails>? get files;
+  List<List<SerializedCallback>>? get serializedMarkup;
+  int? get replyToId;
+  int? get editMessageId;
+  String? get type;
+  String? get additionalData;
+  bool? get isSent;
 
   /// Create a copy of SerializedMessage
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $SerializedMessageCopyWith<SerializedMessage> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $SerializedMessageCopyWith<$Res> {
-  factory $SerializedMessageCopyWith(
-          SerializedMessage value, $Res Function(SerializedMessage) then) =
-      _$SerializedMessageCopyWithImpl<$Res, SerializedMessage>;
-  @useResult
-  $Res call(
-      {String? text,
-      List<TgUtilsFileDetails>? files,
-      List<List<SerializedCallback>>? serializedMarkup,
-      int? replyToId,
-      int? editMessageId,
-      String? type,
-      String? additionalData,
-      bool? isSent});
-}
-
-/// @nodoc
-class _$SerializedMessageCopyWithImpl<$Res, $Val extends SerializedMessage>
-    implements $SerializedMessageCopyWith<$Res> {
-  _$SerializedMessageCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of SerializedMessage
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $SerializedMessageCopyWith<SerializedMessage> get copyWith =>
+      _$SerializedMessageCopyWithImpl<SerializedMessage>(
+          this as SerializedMessage, _$identity);
+
+  /// Serializes this SerializedMessage to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? text = freezed,
-    Object? files = freezed,
-    Object? serializedMarkup = freezed,
-    Object? replyToId = freezed,
-    Object? editMessageId = freezed,
-    Object? type = freezed,
-    Object? additionalData = freezed,
-    Object? isSent = freezed,
-  }) {
-    return _then(_value.copyWith(
-      text: freezed == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String?,
-      files: freezed == files
-          ? _value.files
-          : files // ignore: cast_nullable_to_non_nullable
-              as List<TgUtilsFileDetails>?,
-      serializedMarkup: freezed == serializedMarkup
-          ? _value.serializedMarkup
-          : serializedMarkup // ignore: cast_nullable_to_non_nullable
-              as List<List<SerializedCallback>>?,
-      replyToId: freezed == replyToId
-          ? _value.replyToId
-          : replyToId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      editMessageId: freezed == editMessageId
-          ? _value.editMessageId
-          : editMessageId // ignore: cast_nullable_to_non_nullable
-              as int?,
-      type: freezed == type
-          ? _value.type
-          : type // ignore: cast_nullable_to_non_nullable
-              as String?,
-      additionalData: freezed == additionalData
-          ? _value.additionalData
-          : additionalData // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isSent: freezed == isSent
-          ? _value.isSent
-          : isSent // ignore: cast_nullable_to_non_nullable
-              as bool?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is SerializedMessage &&
+            (identical(other.text, text) || other.text == text) &&
+            const DeepCollectionEquality().equals(other.files, files) &&
+            const DeepCollectionEquality()
+                .equals(other.serializedMarkup, serializedMarkup) &&
+            (identical(other.replyToId, replyToId) ||
+                other.replyToId == replyToId) &&
+            (identical(other.editMessageId, editMessageId) ||
+                other.editMessageId == editMessageId) &&
+            (identical(other.type, type) || other.type == type) &&
+            (identical(other.additionalData, additionalData) ||
+                other.additionalData == additionalData) &&
+            (identical(other.isSent, isSent) || other.isSent == isSent));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      text,
+      const DeepCollectionEquality().hash(files),
+      const DeepCollectionEquality().hash(serializedMarkup),
+      replyToId,
+      editMessageId,
+      type,
+      additionalData,
+      isSent);
+
+  @override
+  String toString() {
+    return 'SerializedMessage(text: $text, files: $files, serializedMarkup: $serializedMarkup, replyToId: $replyToId, editMessageId: $editMessageId, type: $type, additionalData: $additionalData, isSent: $isSent)';
   }
 }
 
 /// @nodoc
-abstract class _$$SerializedMessageImplCopyWith<$Res>
-    implements $SerializedMessageCopyWith<$Res> {
-  factory _$$SerializedMessageImplCopyWith(_$SerializedMessageImpl value,
-          $Res Function(_$SerializedMessageImpl) then) =
-      __$$SerializedMessageImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $SerializedMessageCopyWith<$Res> {
+  factory $SerializedMessageCopyWith(
+          SerializedMessage value, $Res Function(SerializedMessage) _then) =
+      _$SerializedMessageCopyWithImpl;
   @useResult
   $Res call(
       {String? text,
@@ -138,12 +91,12 @@ abstract class _$$SerializedMessageImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$SerializedMessageImplCopyWithImpl<$Res>
-    extends _$SerializedMessageCopyWithImpl<$Res, _$SerializedMessageImpl>
-    implements _$$SerializedMessageImplCopyWith<$Res> {
-  __$$SerializedMessageImplCopyWithImpl(_$SerializedMessageImpl _value,
-      $Res Function(_$SerializedMessageImpl) _then)
-      : super(_value, _then);
+class _$SerializedMessageCopyWithImpl<$Res>
+    implements $SerializedMessageCopyWith<$Res> {
+  _$SerializedMessageCopyWithImpl(this._self, this._then);
+
+  final SerializedMessage _self;
+  final $Res Function(SerializedMessage) _then;
 
   /// Create a copy of SerializedMessage
   /// with the given fields replaced by the non-null parameter values.
@@ -159,37 +112,37 @@ class __$$SerializedMessageImplCopyWithImpl<$Res>
     Object? additionalData = freezed,
     Object? isSent = freezed,
   }) {
-    return _then(_$SerializedMessageImpl(
+    return _then(_self.copyWith(
       text: freezed == text
-          ? _value.text
+          ? _self.text
           : text // ignore: cast_nullable_to_non_nullable
               as String?,
       files: freezed == files
-          ? _value._files
+          ? _self.files
           : files // ignore: cast_nullable_to_non_nullable
               as List<TgUtilsFileDetails>?,
       serializedMarkup: freezed == serializedMarkup
-          ? _value._serializedMarkup
+          ? _self.serializedMarkup
           : serializedMarkup // ignore: cast_nullable_to_non_nullable
               as List<List<SerializedCallback>>?,
       replyToId: freezed == replyToId
-          ? _value.replyToId
+          ? _self.replyToId
           : replyToId // ignore: cast_nullable_to_non_nullable
               as int?,
       editMessageId: freezed == editMessageId
-          ? _value.editMessageId
+          ? _self.editMessageId
           : editMessageId // ignore: cast_nullable_to_non_nullable
               as int?,
       type: freezed == type
-          ? _value.type
+          ? _self.type
           : type // ignore: cast_nullable_to_non_nullable
               as String?,
       additionalData: freezed == additionalData
-          ? _value.additionalData
+          ? _self.additionalData
           : additionalData // ignore: cast_nullable_to_non_nullable
               as String?,
       isSent: freezed == isSent
-          ? _value.isSent
+          ? _self.isSent
           : isSent // ignore: cast_nullable_to_non_nullable
               as bool?,
     ));
@@ -198,8 +151,8 @@ class __$$SerializedMessageImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$SerializedMessageImpl implements _SerializedMessage {
-  const _$SerializedMessageImpl(
+class _SerializedMessage implements SerializedMessage {
+  const _SerializedMessage(
       {this.text,
       final List<TgUtilsFileDetails>? files,
       final List<List<SerializedCallback>>? serializedMarkup,
@@ -210,9 +163,8 @@ class _$SerializedMessageImpl implements _SerializedMessage {
       this.isSent})
       : _files = files,
         _serializedMarkup = serializedMarkup;
-
-  factory _$SerializedMessageImpl.fromJson(Map<String, dynamic> json) =>
-      _$$SerializedMessageImplFromJson(json);
+  factory _SerializedMessage.fromJson(Map<String, dynamic> json) =>
+      _$SerializedMessageFromJson(json);
 
   @override
   final String? text;
@@ -248,16 +200,26 @@ class _$SerializedMessageImpl implements _SerializedMessage {
   @override
   final bool? isSent;
 
+  /// Create a copy of SerializedMessage
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'SerializedMessage(text: $text, files: $files, serializedMarkup: $serializedMarkup, replyToId: $replyToId, editMessageId: $editMessageId, type: $type, additionalData: $additionalData, isSent: $isSent)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$SerializedMessageCopyWith<_SerializedMessage> get copyWith =>
+      __$SerializedMessageCopyWithImpl<_SerializedMessage>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$SerializedMessageToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$SerializedMessageImpl &&
+            other is _SerializedMessage &&
             (identical(other.text, text) || other.text == text) &&
             const DeepCollectionEquality().equals(other._files, _files) &&
             const DeepCollectionEquality()
@@ -285,58 +247,88 @@ class _$SerializedMessageImpl implements _SerializedMessage {
       additionalData,
       isSent);
 
-  /// Create a copy of SerializedMessage
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$SerializedMessageImplCopyWith<_$SerializedMessageImpl> get copyWith =>
-      __$$SerializedMessageImplCopyWithImpl<_$SerializedMessageImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$SerializedMessageImplToJson(
-      this,
-    );
+  String toString() {
+    return 'SerializedMessage(text: $text, files: $files, serializedMarkup: $serializedMarkup, replyToId: $replyToId, editMessageId: $editMessageId, type: $type, additionalData: $additionalData, isSent: $isSent)';
   }
 }
 
-abstract class _SerializedMessage implements SerializedMessage {
-  const factory _SerializedMessage(
-      {final String? text,
-      final List<TgUtilsFileDetails>? files,
-      final List<List<SerializedCallback>>? serializedMarkup,
-      final int? replyToId,
-      final int? editMessageId,
-      final String? type,
-      final String? additionalData,
-      final bool? isSent}) = _$SerializedMessageImpl;
+/// @nodoc
+abstract mixin class _$SerializedMessageCopyWith<$Res>
+    implements $SerializedMessageCopyWith<$Res> {
+  factory _$SerializedMessageCopyWith(
+          _SerializedMessage value, $Res Function(_SerializedMessage) _then) =
+      __$SerializedMessageCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {String? text,
+      List<TgUtilsFileDetails>? files,
+      List<List<SerializedCallback>>? serializedMarkup,
+      int? replyToId,
+      int? editMessageId,
+      String? type,
+      String? additionalData,
+      bool? isSent});
+}
 
-  factory _SerializedMessage.fromJson(Map<String, dynamic> json) =
-      _$SerializedMessageImpl.fromJson;
+/// @nodoc
+class __$SerializedMessageCopyWithImpl<$Res>
+    implements _$SerializedMessageCopyWith<$Res> {
+  __$SerializedMessageCopyWithImpl(this._self, this._then);
 
-  @override
-  String? get text;
-  @override
-  List<TgUtilsFileDetails>? get files;
-  @override
-  List<List<SerializedCallback>>? get serializedMarkup;
-  @override
-  int? get replyToId;
-  @override
-  int? get editMessageId;
-  @override
-  String? get type;
-  @override
-  String? get additionalData;
-  @override
-  bool? get isSent;
+  final _SerializedMessage _self;
+  final $Res Function(_SerializedMessage) _then;
 
   /// Create a copy of SerializedMessage
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$SerializedMessageImplCopyWith<_$SerializedMessageImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? text = freezed,
+    Object? files = freezed,
+    Object? serializedMarkup = freezed,
+    Object? replyToId = freezed,
+    Object? editMessageId = freezed,
+    Object? type = freezed,
+    Object? additionalData = freezed,
+    Object? isSent = freezed,
+  }) {
+    return _then(_SerializedMessage(
+      text: freezed == text
+          ? _self.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String?,
+      files: freezed == files
+          ? _self._files
+          : files // ignore: cast_nullable_to_non_nullable
+              as List<TgUtilsFileDetails>?,
+      serializedMarkup: freezed == serializedMarkup
+          ? _self._serializedMarkup
+          : serializedMarkup // ignore: cast_nullable_to_non_nullable
+              as List<List<SerializedCallback>>?,
+      replyToId: freezed == replyToId
+          ? _self.replyToId
+          : replyToId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      editMessageId: freezed == editMessageId
+          ? _self.editMessageId
+          : editMessageId // ignore: cast_nullable_to_non_nullable
+              as int?,
+      type: freezed == type
+          ? _self.type
+          : type // ignore: cast_nullable_to_non_nullable
+              as String?,
+      additionalData: freezed == additionalData
+          ? _self.additionalData
+          : additionalData // ignore: cast_nullable_to_non_nullable
+              as String?,
+      isSent: freezed == isSent
+          ? _self.isSent
+          : isSent // ignore: cast_nullable_to_non_nullable
+              as bool?,
+    ));
+  }
 }
+
+// dart format on

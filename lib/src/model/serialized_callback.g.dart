@@ -6,16 +6,14 @@ part of 'serialized_callback.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SerializedCallbackImpl _$$SerializedCallbackImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SerializedCallbackImpl(
+_SerializedCallback _$SerializedCallbackFromJson(Map<String, dynamic> json) =>
+    _SerializedCallback(
       text: json['text'] as String,
       callbackData: json['callbackData'] as String?,
       url: json['url'] as String?,
     );
 
-Map<String, dynamic> _$$SerializedCallbackImplToJson(
-        _$SerializedCallbackImpl instance) =>
+Map<String, dynamic> _$SerializedCallbackToJson(_SerializedCallback instance) =>
     <String, dynamic>{
       'text': instance.text,
       'callbackData': instance.callbackData,

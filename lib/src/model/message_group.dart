@@ -5,7 +5,7 @@ part 'message_group.freezed.dart';
 part 'message_group.g.dart';
 
 @freezed
-class MessageGroup with _$MessageGroup {
+sealed class MessageGroup with _$MessageGroup {
   const factory MessageGroup({
     required List<SerializedMessage> messages,
     required int chatId,

@@ -6,7 +6,7 @@ part 'serialized_message.freezed.dart';
 part 'serialized_message.g.dart';
 
 @freezed
-class SerializedMessage with _$SerializedMessage {
+sealed class SerializedMessage with _$SerializedMessage {
   const factory SerializedMessage({
     String? text,
     List<TgUtilsFileDetails>? files,

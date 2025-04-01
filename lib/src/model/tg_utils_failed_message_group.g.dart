@@ -6,16 +6,14 @@ part of 'tg_utils_failed_message_group.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FailedMessageGroupImpl _$$FailedMessageGroupImplFromJson(
-        Map<String, dynamic> json) =>
-    _$FailedMessageGroupImpl(
+_FailedMessageGroup _$FailedMessageGroupFromJson(Map<String, dynamic> json) =>
+    _FailedMessageGroup(
       group: json['group'] as String,
       message: json['message'] as String,
       exception: json['exception'] as String,
     );
 
-Map<String, dynamic> _$$FailedMessageGroupImplToJson(
-        _$FailedMessageGroupImpl instance) =>
+Map<String, dynamic> _$FailedMessageGroupToJson(_FailedMessageGroup instance) =>
     <String, dynamic>{
       'group': instance.group,
       'message': instance.message,

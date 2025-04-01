@@ -6,9 +6,8 @@ part of 'serialized_message.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$SerializedMessageImpl _$$SerializedMessageImplFromJson(
-        Map<String, dynamic> json) =>
-    _$SerializedMessageImpl(
+_SerializedMessage _$SerializedMessageFromJson(Map<String, dynamic> json) =>
+    _SerializedMessage(
       text: json['text'] as String?,
       files: (json['files'] as List<dynamic>?)
           ?.map((e) => TgUtilsFileDetails.fromJson(e as Map<String, dynamic>))
@@ -26,8 +25,7 @@ _$SerializedMessageImpl _$$SerializedMessageImplFromJson(
       isSent: json['isSent'] as bool?,
     );
 
-Map<String, dynamic> _$$SerializedMessageImplToJson(
-        _$SerializedMessageImpl instance) =>
+Map<String, dynamic> _$SerializedMessageToJson(_SerializedMessage instance) =>
     <String, dynamic>{
       'text': instance.text,
       'files': instance.files,

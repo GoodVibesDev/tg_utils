@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,93 +10,60 @@ part of 'message_group.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-MessageGroup _$MessageGroupFromJson(Map<String, dynamic> json) {
-  return _MessageGroup.fromJson(json);
-}
 
 /// @nodoc
 mixin _$MessageGroup {
-  List<SerializedMessage> get messages => throw _privateConstructorUsedError;
-  int get chatId => throw _privateConstructorUsedError;
-  int? get failCounter => throw _privateConstructorUsedError;
-  int? get priority => throw _privateConstructorUsedError;
-
-  /// Serializes this MessageGroup to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  List<SerializedMessage> get messages;
+  int get chatId;
+  int? get failCounter;
+  int? get priority;
 
   /// Create a copy of MessageGroup
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MessageGroupCopyWith<MessageGroup> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MessageGroupCopyWith<$Res> {
-  factory $MessageGroupCopyWith(
-          MessageGroup value, $Res Function(MessageGroup) then) =
-      _$MessageGroupCopyWithImpl<$Res, MessageGroup>;
-  @useResult
-  $Res call(
-      {List<SerializedMessage> messages,
-      int chatId,
-      int? failCounter,
-      int? priority});
-}
-
-/// @nodoc
-class _$MessageGroupCopyWithImpl<$Res, $Val extends MessageGroup>
-    implements $MessageGroupCopyWith<$Res> {
-  _$MessageGroupCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of MessageGroup
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $MessageGroupCopyWith<MessageGroup> get copyWith =>
+      _$MessageGroupCopyWithImpl<MessageGroup>(
+          this as MessageGroup, _$identity);
+
+  /// Serializes this MessageGroup to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? messages = null,
-    Object? chatId = null,
-    Object? failCounter = freezed,
-    Object? priority = freezed,
-  }) {
-    return _then(_value.copyWith(
-      messages: null == messages
-          ? _value.messages
-          : messages // ignore: cast_nullable_to_non_nullable
-              as List<SerializedMessage>,
-      chatId: null == chatId
-          ? _value.chatId
-          : chatId // ignore: cast_nullable_to_non_nullable
-              as int,
-      failCounter: freezed == failCounter
-          ? _value.failCounter
-          : failCounter // ignore: cast_nullable_to_non_nullable
-              as int?,
-      priority: freezed == priority
-          ? _value.priority
-          : priority // ignore: cast_nullable_to_non_nullable
-              as int?,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is MessageGroup &&
+            const DeepCollectionEquality().equals(other.messages, messages) &&
+            (identical(other.chatId, chatId) || other.chatId == chatId) &&
+            (identical(other.failCounter, failCounter) ||
+                other.failCounter == failCounter) &&
+            (identical(other.priority, priority) ||
+                other.priority == priority));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(messages),
+      chatId,
+      failCounter,
+      priority);
+
+  @override
+  String toString() {
+    return 'MessageGroup(messages: $messages, chatId: $chatId, failCounter: $failCounter, priority: $priority)';
   }
 }
 
 /// @nodoc
-abstract class _$$MessageGroupImplCopyWith<$Res>
-    implements $MessageGroupCopyWith<$Res> {
-  factory _$$MessageGroupImplCopyWith(
-          _$MessageGroupImpl value, $Res Function(_$MessageGroupImpl) then) =
-      __$$MessageGroupImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $MessageGroupCopyWith<$Res> {
+  factory $MessageGroupCopyWith(
+          MessageGroup value, $Res Function(MessageGroup) _then) =
+      _$MessageGroupCopyWithImpl;
   @useResult
   $Res call(
       {List<SerializedMessage> messages,
@@ -105,12 +73,11 @@ abstract class _$$MessageGroupImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$MessageGroupImplCopyWithImpl<$Res>
-    extends _$MessageGroupCopyWithImpl<$Res, _$MessageGroupImpl>
-    implements _$$MessageGroupImplCopyWith<$Res> {
-  __$$MessageGroupImplCopyWithImpl(
-      _$MessageGroupImpl _value, $Res Function(_$MessageGroupImpl) _then)
-      : super(_value, _then);
+class _$MessageGroupCopyWithImpl<$Res> implements $MessageGroupCopyWith<$Res> {
+  _$MessageGroupCopyWithImpl(this._self, this._then);
+
+  final MessageGroup _self;
+  final $Res Function(MessageGroup) _then;
 
   /// Create a copy of MessageGroup
   /// with the given fields replaced by the non-null parameter values.
@@ -122,21 +89,21 @@ class __$$MessageGroupImplCopyWithImpl<$Res>
     Object? failCounter = freezed,
     Object? priority = freezed,
   }) {
-    return _then(_$MessageGroupImpl(
+    return _then(_self.copyWith(
       messages: null == messages
-          ? _value._messages
+          ? _self.messages
           : messages // ignore: cast_nullable_to_non_nullable
               as List<SerializedMessage>,
       chatId: null == chatId
-          ? _value.chatId
+          ? _self.chatId
           : chatId // ignore: cast_nullable_to_non_nullable
               as int,
       failCounter: freezed == failCounter
-          ? _value.failCounter
+          ? _self.failCounter
           : failCounter // ignore: cast_nullable_to_non_nullable
               as int?,
       priority: freezed == priority
-          ? _value.priority
+          ? _self.priority
           : priority // ignore: cast_nullable_to_non_nullable
               as int?,
     ));
@@ -145,16 +112,15 @@ class __$$MessageGroupImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MessageGroupImpl implements _MessageGroup {
-  const _$MessageGroupImpl(
+class _MessageGroup implements MessageGroup {
+  const _MessageGroup(
       {required final List<SerializedMessage> messages,
       required this.chatId,
       this.failCounter,
       this.priority})
       : _messages = messages;
-
-  factory _$MessageGroupImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MessageGroupImplFromJson(json);
+  factory _MessageGroup.fromJson(Map<String, dynamic> json) =>
+      _$MessageGroupFromJson(json);
 
   final List<SerializedMessage> _messages;
   @override
@@ -171,16 +137,26 @@ class _$MessageGroupImpl implements _MessageGroup {
   @override
   final int? priority;
 
+  /// Create a copy of MessageGroup
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'MessageGroup(messages: $messages, chatId: $chatId, failCounter: $failCounter, priority: $priority)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$MessageGroupCopyWith<_MessageGroup> get copyWith =>
+      __$MessageGroupCopyWithImpl<_MessageGroup>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$MessageGroupToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MessageGroupImpl &&
+            other is _MessageGroup &&
             const DeepCollectionEquality().equals(other._messages, _messages) &&
             (identical(other.chatId, chatId) || other.chatId == chatId) &&
             (identical(other.failCounter, failCounter) ||
@@ -198,45 +174,64 @@ class _$MessageGroupImpl implements _MessageGroup {
       failCounter,
       priority);
 
-  /// Create a copy of MessageGroup
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$MessageGroupImplCopyWith<_$MessageGroupImpl> get copyWith =>
-      __$$MessageGroupImplCopyWithImpl<_$MessageGroupImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$MessageGroupImplToJson(
-      this,
-    );
+  String toString() {
+    return 'MessageGroup(messages: $messages, chatId: $chatId, failCounter: $failCounter, priority: $priority)';
   }
 }
 
-abstract class _MessageGroup implements MessageGroup {
-  const factory _MessageGroup(
-      {required final List<SerializedMessage> messages,
-      required final int chatId,
-      final int? failCounter,
-      final int? priority}) = _$MessageGroupImpl;
+/// @nodoc
+abstract mixin class _$MessageGroupCopyWith<$Res>
+    implements $MessageGroupCopyWith<$Res> {
+  factory _$MessageGroupCopyWith(
+          _MessageGroup value, $Res Function(_MessageGroup) _then) =
+      __$MessageGroupCopyWithImpl;
+  @override
+  @useResult
+  $Res call(
+      {List<SerializedMessage> messages,
+      int chatId,
+      int? failCounter,
+      int? priority});
+}
 
-  factory _MessageGroup.fromJson(Map<String, dynamic> json) =
-      _$MessageGroupImpl.fromJson;
+/// @nodoc
+class __$MessageGroupCopyWithImpl<$Res>
+    implements _$MessageGroupCopyWith<$Res> {
+  __$MessageGroupCopyWithImpl(this._self, this._then);
 
-  @override
-  List<SerializedMessage> get messages;
-  @override
-  int get chatId;
-  @override
-  int? get failCounter;
-  @override
-  int? get priority;
+  final _MessageGroup _self;
+  final $Res Function(_MessageGroup) _then;
 
   /// Create a copy of MessageGroup
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MessageGroupImplCopyWith<_$MessageGroupImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? messages = null,
+    Object? chatId = null,
+    Object? failCounter = freezed,
+    Object? priority = freezed,
+  }) {
+    return _then(_MessageGroup(
+      messages: null == messages
+          ? _self._messages
+          : messages // ignore: cast_nullable_to_non_nullable
+              as List<SerializedMessage>,
+      chatId: null == chatId
+          ? _self.chatId
+          : chatId // ignore: cast_nullable_to_non_nullable
+              as int,
+      failCounter: freezed == failCounter
+          ? _self.failCounter
+          : failCounter // ignore: cast_nullable_to_non_nullable
+              as int?,
+      priority: freezed == priority
+          ? _self.priority
+          : priority // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
 }
+
+// dart format on

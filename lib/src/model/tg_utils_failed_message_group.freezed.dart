@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,11 +10,8 @@ part of 'tg_utils_failed_message_group.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 TgUtilsFailedMessageGroup _$TgUtilsFailedMessageGroupFromJson(
     Map<String, dynamic> json) {
   return _FailedMessageGroup.fromJson(json);
@@ -21,138 +19,26 @@ TgUtilsFailedMessageGroup _$TgUtilsFailedMessageGroupFromJson(
 
 /// @nodoc
 mixin _$TgUtilsFailedMessageGroup {
-  String get group => throw _privateConstructorUsedError;
-  String get message => throw _privateConstructorUsedError;
-  String get exception => throw _privateConstructorUsedError;
-
-  /// Serializes this TgUtilsFailedMessageGroup to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  String get group;
+  String get message;
+  String get exception;
 
   /// Create a copy of TgUtilsFailedMessageGroup
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
   $TgUtilsFailedMessageGroupCopyWith<TgUtilsFailedMessageGroup> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+      _$TgUtilsFailedMessageGroupCopyWithImpl<TgUtilsFailedMessageGroup>(
+          this as TgUtilsFailedMessageGroup, _$identity);
 
-/// @nodoc
-abstract class $TgUtilsFailedMessageGroupCopyWith<$Res> {
-  factory $TgUtilsFailedMessageGroupCopyWith(TgUtilsFailedMessageGroup value,
-          $Res Function(TgUtilsFailedMessageGroup) then) =
-      _$TgUtilsFailedMessageGroupCopyWithImpl<$Res, TgUtilsFailedMessageGroup>;
-  @useResult
-  $Res call({String group, String message, String exception});
-}
-
-/// @nodoc
-class _$TgUtilsFailedMessageGroupCopyWithImpl<$Res,
-        $Val extends TgUtilsFailedMessageGroup>
-    implements $TgUtilsFailedMessageGroupCopyWith<$Res> {
-  _$TgUtilsFailedMessageGroupCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of TgUtilsFailedMessageGroup
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? group = null,
-    Object? message = null,
-    Object? exception = null,
-  }) {
-    return _then(_value.copyWith(
-      group: null == group
-          ? _value.group
-          : group // ignore: cast_nullable_to_non_nullable
-              as String,
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      exception: null == exception
-          ? _value.exception
-          : exception // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
-  }
-}
-
-/// @nodoc
-abstract class _$$FailedMessageGroupImplCopyWith<$Res>
-    implements $TgUtilsFailedMessageGroupCopyWith<$Res> {
-  factory _$$FailedMessageGroupImplCopyWith(_$FailedMessageGroupImpl value,
-          $Res Function(_$FailedMessageGroupImpl) then) =
-      __$$FailedMessageGroupImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call({String group, String message, String exception});
-}
-
-/// @nodoc
-class __$$FailedMessageGroupImplCopyWithImpl<$Res>
-    extends _$TgUtilsFailedMessageGroupCopyWithImpl<$Res,
-        _$FailedMessageGroupImpl>
-    implements _$$FailedMessageGroupImplCopyWith<$Res> {
-  __$$FailedMessageGroupImplCopyWithImpl(_$FailedMessageGroupImpl _value,
-      $Res Function(_$FailedMessageGroupImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of TgUtilsFailedMessageGroup
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? group = null,
-    Object? message = null,
-    Object? exception = null,
-  }) {
-    return _then(_$FailedMessageGroupImpl(
-      group: null == group
-          ? _value.group
-          : group // ignore: cast_nullable_to_non_nullable
-              as String,
-      message: null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-      exception: null == exception
-          ? _value.exception
-          : exception // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-@JsonSerializable()
-class _$FailedMessageGroupImpl implements _FailedMessageGroup {
-  const _$FailedMessageGroupImpl(
-      {required this.group, required this.message, required this.exception});
-
-  factory _$FailedMessageGroupImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FailedMessageGroupImplFromJson(json);
-
-  @override
-  final String group;
-  @override
-  final String message;
-  @override
-  final String exception;
-
-  @override
-  String toString() {
-    return 'TgUtilsFailedMessageGroup(group: $group, message: $message, exception: $exception)';
-  }
+  /// Serializes this TgUtilsFailedMessageGroup to a JSON map.
+  Map<String, dynamic> toJson();
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FailedMessageGroupImpl &&
+            other is TgUtilsFailedMessageGroup &&
             (identical(other.group, group) || other.group == group) &&
             (identical(other.message, message) || other.message == message) &&
             (identical(other.exception, exception) ||
@@ -163,43 +49,149 @@ class _$FailedMessageGroupImpl implements _FailedMessageGroup {
   @override
   int get hashCode => Object.hash(runtimeType, group, message, exception);
 
-  /// Create a copy of TgUtilsFailedMessageGroup
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FailedMessageGroupImplCopyWith<_$FailedMessageGroupImpl> get copyWith =>
-      __$$FailedMessageGroupImplCopyWithImpl<_$FailedMessageGroupImpl>(
-          this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$FailedMessageGroupImplToJson(
-      this,
-    );
+  String toString() {
+    return 'TgUtilsFailedMessageGroup(group: $group, message: $message, exception: $exception)';
   }
 }
 
-abstract class _FailedMessageGroup implements TgUtilsFailedMessageGroup {
-  const factory _FailedMessageGroup(
-      {required final String group,
-      required final String message,
-      required final String exception}) = _$FailedMessageGroupImpl;
+/// @nodoc
+abstract mixin class $TgUtilsFailedMessageGroupCopyWith<$Res> {
+  factory $TgUtilsFailedMessageGroupCopyWith(TgUtilsFailedMessageGroup value,
+          $Res Function(TgUtilsFailedMessageGroup) _then) =
+      _$TgUtilsFailedMessageGroupCopyWithImpl;
+  @useResult
+  $Res call({String group, String message, String exception});
+}
 
-  factory _FailedMessageGroup.fromJson(Map<String, dynamic> json) =
-      _$FailedMessageGroupImpl.fromJson;
+/// @nodoc
+class _$TgUtilsFailedMessageGroupCopyWithImpl<$Res>
+    implements $TgUtilsFailedMessageGroupCopyWith<$Res> {
+  _$TgUtilsFailedMessageGroupCopyWithImpl(this._self, this._then);
+
+  final TgUtilsFailedMessageGroup _self;
+  final $Res Function(TgUtilsFailedMessageGroup) _then;
+
+  /// Create a copy of TgUtilsFailedMessageGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? group = null,
+    Object? message = null,
+    Object? exception = null,
+  }) {
+    return _then(_self.copyWith(
+      group: null == group
+          ? _self.group
+          : group // ignore: cast_nullable_to_non_nullable
+              as String,
+      message: null == message
+          ? _self.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      exception: null == exception
+          ? _self.exception
+          : exception // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _FailedMessageGroup implements TgUtilsFailedMessageGroup {
+  const _FailedMessageGroup(
+      {required this.group, required this.message, required this.exception});
+  factory _FailedMessageGroup.fromJson(Map<String, dynamic> json) =>
+      _$FailedMessageGroupFromJson(json);
 
   @override
-  String get group;
+  final String group;
   @override
-  String get message;
+  final String message;
   @override
-  String get exception;
+  final String exception;
 
   /// Create a copy of TgUtilsFailedMessageGroup
   /// with the given fields replaced by the non-null parameter values.
   @override
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FailedMessageGroupImplCopyWith<_$FailedMessageGroupImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  _$FailedMessageGroupCopyWith<_FailedMessageGroup> get copyWith =>
+      __$FailedMessageGroupCopyWithImpl<_FailedMessageGroup>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FailedMessageGroupToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _FailedMessageGroup &&
+            (identical(other.group, group) || other.group == group) &&
+            (identical(other.message, message) || other.message == message) &&
+            (identical(other.exception, exception) ||
+                other.exception == exception));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, group, message, exception);
+
+  @override
+  String toString() {
+    return 'TgUtilsFailedMessageGroup(group: $group, message: $message, exception: $exception)';
+  }
 }
+
+/// @nodoc
+abstract mixin class _$FailedMessageGroupCopyWith<$Res>
+    implements $TgUtilsFailedMessageGroupCopyWith<$Res> {
+  factory _$FailedMessageGroupCopyWith(
+          _FailedMessageGroup value, $Res Function(_FailedMessageGroup) _then) =
+      __$FailedMessageGroupCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String group, String message, String exception});
+}
+
+/// @nodoc
+class __$FailedMessageGroupCopyWithImpl<$Res>
+    implements _$FailedMessageGroupCopyWith<$Res> {
+  __$FailedMessageGroupCopyWithImpl(this._self, this._then);
+
+  final _FailedMessageGroup _self;
+  final $Res Function(_FailedMessageGroup) _then;
+
+  /// Create a copy of TgUtilsFailedMessageGroup
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? group = null,
+    Object? message = null,
+    Object? exception = null,
+  }) {
+    return _then(_FailedMessageGroup(
+      group: null == group
+          ? _self.group
+          : group // ignore: cast_nullable_to_non_nullable
+              as String,
+      message: null == message
+          ? _self.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+      exception: null == exception
+          ? _self.exception
+          : exception // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+// dart format on
